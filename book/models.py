@@ -19,7 +19,7 @@ class BookInfo(models.Model):
         verbose_name = "书籍管理"
 
 
-class PersonInfo(models.Model):
+class PeopleInfo(models.Model):
     GENDER_CHOICE = (
         (1, "male"),
         (2, "female"),
@@ -32,4 +32,4 @@ class PersonInfo(models.Model):
     book = models.ForeignKey("BookInfo", on_delete=models.CASCADE)
 
     class Meta:
-        db_table = "personinfo"
+        db_table = "peopleinfo"
