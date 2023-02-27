@@ -2,6 +2,7 @@ from django.urls import path
 from django.urls.converters import register_converter
 
 from book.views import create_book, shop, register, json, method
+from book.view02 import set_session, get_session
 
 
 # 1.定义转换器
@@ -27,4 +28,6 @@ urlpatterns = [
     path('register/', register),
     path('json/', json),
     path('method/', method),
+    path('set_session/', set_session),
+    path('get_session/', get_session),
 ]
